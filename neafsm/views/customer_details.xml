@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form_inherited">
+            <field name="name">res.partner.form.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="company_type" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="vat" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="website" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="title" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="function" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="parent_id" position="after">
+                    <group>
+                        <field name="consumer_id"/>
+                        <field name="consumer_sc_no"/>
+                        <field name="customer_category"/>
+                        <field name="department_name"/>
+                    </group>
+                </field>
+                <field name="parent_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='geo_location']" position="attributes">
+                    <attribute name="string">GPS coordinates</attribute>
+                </xpath>
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page name="device_details" string="Device Details">
+                        <group>
+                            <group>
+                                <field name="meter_sn"/>
+                                <field name="meter_type"/>
+                                <field name="installed_by"/>
+                            </group>
+                            <group>
+                                <field name="meter_reading"/>
+                                <field name="approved_load"/>
+                                <field name="installed_date"/>
+
+                            </group>
+                            <field name="sm_image" widget="image"/>
+                        </group>
+                    </page>
+                </xpath>
+                <field name="vat" position="after">
+                    <field name="nearest_landmark"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

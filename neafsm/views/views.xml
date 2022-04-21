@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<!--    <record id="smartmeter_details_tree" model="ir.ui.view">-->
+<!--        <field name="name">smartmeter.details.tree</field>-->
+<!--        <field name="model">smartmeter.details</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree>-->
+<!--                <field name="name"/>-->
+<!--                <field name="meter_type"/>-->
+<!--                <field name="meter_reading"/>-->
+<!--                <field name="approved_load"/>-->
+<!--                <field name="rel_partner_id"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--    <record id="smartmeter_details_form" model="ir.ui.view">-->
+<!--        <field name="name">smartmeter.details.form</field>-->
+<!--        <field name="model">smartmeter.details</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <sheet>-->
+<!--                    <div class="oe_title">-->
+<!--                        <h1>-->
+<!--                            <field name="name"/>-->
+<!--                        </h1>-->
+<!--                    </div>-->
+<!--                    <group>-->
+<!--                        <group>-->
+<!--                            <field name="meter_type"/>-->
+<!--                            <field name="rel_partner_id"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="meter_reading"/>-->
+<!--                            <field name="approved_load"/>-->
+<!--                        </group>-->
+<!--                    </group>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+    <menuitem id="nea_fsm_root"
+              name="NEA FSM"
+              sequence="10"/>
+
+    <menuitem id="smartmeter"
+              name="Smartmeter"
+              parent="nea_fsm_root"
+              action="project.open_view_project_all"
+              sequence="10"/>
+    <menuitem id="customers"
+              name="Customers"
+              parent="nea_fsm_root"
+              action="contacts.action_contacts"
+              sequence="11"/>
+</odoo>

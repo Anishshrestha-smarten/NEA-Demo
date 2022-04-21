@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_reschedule_data,access.reschedule.data,model_reschedule_data,,1,1,1,1
+access_cancel_data,access.cancel.data,model_cancel_data,,1,1,1,1
+access_complete_data,access.complete.data,model_complete_data,,1,1,1,1
